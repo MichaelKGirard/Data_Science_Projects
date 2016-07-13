@@ -1,0 +1,15 @@
+[global]
+floatX = float32
+device = gpu
+optimizer = fast_run
+optimizer_including=cudnn
+
+ 
+[lib]
+cnmem = 0.75
+ 
+[nvcc]
+fastmath = True
+flags= -D_FORCE_INLINES 
+[blas]
+ldflags = -llapack -lblas
