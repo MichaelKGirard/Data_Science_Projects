@@ -1,0 +1,115 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.9in, textheight=9.5in, marginparsep=7pt, marginparwidth=.5in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand\tab[1][.5cm]{\hspace*{#1}}
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Michael Girard - vita},
+	pdfauthor={Michael Girard},
+	pdfproducer={http://nitens.org/taraborelli/cvtex}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Michael Girard}\\[.75cm]
+ University of California, Berkeley\\
+420K Old Leconte Hall\\
+Berkeley, CA 94720 U.S.A.\\[.2cm]
+Phone: 509-438-2161\\
+email: \href{mailto:michael.girard@berkeley.edu}{michael.girard@berkeley.edu}\\
+%%\section*{Personal Statement}
+%%\indent I am a self-driven individual with desire to see tasks to completion. During both my undergraduate and graduate work, I cultivated a strong ability to internalize deep understanding of a concept quickly and critically think about problem solving in innovative ways. Having taught a wide array of physics classes for many years, I have also developed the skill of explaining a complex concept to non-experts intelligibly and succinctly.
+\section*{Education}
+\years{2016}(expected) \textsc{PhD.} in Physics, University of California, Berkeley (GPA - 3.9)\\ 
+\years{2013}\textsc{MA} in Physics, University of California, Berkeley (GPA - 3.9)\\
+\years{2011}\textsc{BS} in Physics, University of California, Irvine (GPA - 4.0)\\
+\section*{Honors \& Awards}
+\years{2016}Outstanding Graduate Student Instructor Award, Berkeley Physics Department\\
+\years{2011}Graduated Summa Cum Laude, University of California, Irvine\\
+\years{2011}University of California, Irvine Physics Department's Outstanding Senior Award\\
+\years{2011} Elected Phi Beta Kappa Honors Society\\
+\years{2010} Elected University of California, Irvine Sigma Pi Sigma Physics Society President\\
+\section*{Skills}
+\textbf{Languages:} C/C++, python, Terminal shell scripting\\
+\textbf{Mathematical tools:} scipy, pandas, matplotlib, numpy, Octave, Mathematica\\
+\textbf{Active Learning:} Coursera and edX courses on Machine Learning techniques and interaction with SQL databases\\
+\section*{Research Interests}
+ \years{2013-}I am currently working on a project involving a calculation that will be used to predict important physical quantities used by large particle colliders around the world. The second part of the project involves the implementation of this calculation into a C++ code base. \\
+ \\
+The first part of the project was to calculate the likelihood of producing two heavy particles, the W Boson and the Charm quark, to higher precision using standard and non-standard techniques. I was in charge of finding an alternative to the standard method of calculation in order to provide a cross-check assuring that the final answer was correct and reliable. \newline
+\\
+The second part of this project involves turning this theoretical calculation into a program that can be run by a larger particle physics simulator, called GENEVA. The bulk of the code was written in C++ with Python and command line tools used primarily for text and data manipulation. While integrating our calculation into GENEVA I collaborated with several post-doctoral fellows to solve various subtle problems involving data transfer among different parts of the simulator and interpolating between two separate regimes of a solution, to name a few. My collaborators and I are continuing to make strides towards completion and expect a spring 2016 publication. 
+%"Performed independent calculation of precision observable in the Standard Model that provides a prediction to be tested in large scale particle physics experiments
+%During this project I have collaborated with several post-doctoral fellows in CERN, in Switzerland, and Los Alamos National Lab, in New Mexico, to integrate the theoretical calculation into GENEVA. Some very subtle problems have arisen involving data transfer among various parts of the simulator and interpolating between two different regimes of a solution, to name a few. 
+%\begin{center}
+%{%\scriptsize  Last updated: \today%\- •\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+%Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+%\fontspec{Times New Roman}
+%\XeTeX }\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+%\href{http://nitens.org/taraborelli/cvtex}{http://nitens.org/taraborelli/cvtex}
+%}
+%\end{center}
+
+\end{document}
